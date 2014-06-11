@@ -1,0 +1,4 @@
+syntax enable
+set guioptions-=mT
+set background=dark
+colorscheme solarized
