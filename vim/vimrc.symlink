@@ -1,4 +1,45 @@
-syntax enable
+set nocompatible
+
+"" Vundle START
+filetype off
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+Plugin 'gmarik/Vundle.vim'
+Plugin 'fatih/vim-go'
+Plugin 'kchmck/vim-coffee-script'
+
+call vundle#end()
+filetype plugin indent on
+syntax on
+"" Vundle END
+
 set guioptions-=mT
+
+"" Colors
 set background=dark
 colorscheme monokai
+
+"" UI
+set number
+set showcmd
+set cursorline
+set wildmenu
+set lazyredraw
+
+"" Tabs
+set tabstop=4
+set softtabstop=4
+set expandtab
+
+"" Searching
+set hlsearch
+set incsearch
+set showmatch
+" turn off search highlight
+nnoremap <leader><space> :nohlsearch<CR>
+
+"" Remapping
+let mapleader=","
+inoremap jj <esc>
+
