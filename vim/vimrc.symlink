@@ -25,21 +25,58 @@ set number
 set showcmd
 set cursorline
 set wildmenu
+set wildmode=list:longest
+set visualbell
+set ttyfast
 set lazyredraw
+set ruler
+set backspace=indent,eol,start
+set autoindent
+set showmode
+set hidden
+set laststatus=2
+set relativenumber
+set undofile
 
 "" Tabs
 set tabstop=4
+set shiftwidth=4
 set softtabstop=4
 set expandtab
+
+
+set encoding=utf-8
+set scrolloff=3
+
 
 "" Searching
 set hlsearch
 set incsearch
 set showmatch
+set ignorecase
+set smartcase
+
+
+
 " turn off search highlight
 nnoremap <leader><space> :nohlsearch<CR>
+
+" Replace
+set gdefault
+
+" Wrapping
+set wrap
+set textwidth=79
+set formatoptions=qrn1
+set colorcolumn=85
+
+" Hidden characters
+set list
+set listchars=tab:▸\ ,eol:¬
 
 "" Remapping
 let mapleader=","
 inoremap jj <esc>
+"Auto save on focus loss
+au FocusLost * :wa
 
