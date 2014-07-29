@@ -8,6 +8,11 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 Plugin 'fatih/vim-go'
 Plugin 'kchmck/vim-coffee-script'
+Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-repeat'
+Plugin 'tpope/vim-commentary'
+Plugin 'vim-scripts/bexec'
+
 
 call vundle#end()
 filetype plugin indent on
@@ -25,7 +30,7 @@ set number
 set showcmd
 set cursorline
 set wildmenu
-set wildmode=list:longest
+set wildmode=list:full
 set visualbell
 set ttyfast
 set lazyredraw
@@ -77,6 +82,4 @@ set listchars=tab:▸\ ,eol:¬
 "" Remapping
 let mapleader=","
 inoremap jj <esc>
-"Auto save on focus loss
-au FocusLost * :wa
 
