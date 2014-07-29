@@ -1,1 +1,1 @@
-xkbcomp dvorap_se_programmer.xbm $DISPLAY
+xkbcomp dvorak_se_programmer.xkb $DISPLAY
