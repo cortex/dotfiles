@@ -6,14 +6,16 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'gmarik/Vundle.vim'
+Plugin 'Blackrush/vim-gocode'
 Plugin 'fatih/vim-go'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-commentary'
 Plugin 'vim-scripts/bexec'
-
-
+Plugin 'Chiel92/vim-autoformat'
+Plugin 'terryma/vim-multiple-cursors'
+Plugin 'Valloric/YouCompleteMe'
 call vundle#end()
 filetype plugin indent on
 syntax on
@@ -42,7 +44,7 @@ set hidden
 set laststatus=2
 set relativenumber
 set undofile
-
+set mouse=a
 "" Tabs
 set tabstop=4
 set shiftwidth=4
