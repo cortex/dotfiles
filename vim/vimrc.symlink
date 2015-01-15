@@ -1,12 +1,14 @@
 set nocompatible
-
+set encoding=utf-8
+"
 "" Vundle START
 filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
+
 call vundle#begin()
 
 Plugin 'gmarik/Vundle.vim'
-Plugin 'Blackrush/vim-gocode'
+Plugin 'Valloric/YouCompleteMe'
 Plugin 'fatih/vim-go'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'tpope/vim-surround'
@@ -15,17 +17,34 @@ Plugin 'tpope/vim-commentary'
 Plugin 'vim-scripts/bexec'
 Plugin 'Chiel92/vim-autoformat'
 Plugin 'terryma/vim-multiple-cursors'
-Plugin 'Valloric/YouCompleteMe'
+Plugin 'JuliaLang/julia-vim'
+
+"" Javascript stuff
+Plugin 'pangloss/vim-javascript'
+Plugin 'mxw/vim-jsx'
+
+Plugin 'ctrlp.vim'
+Plugin 'bling/vim-airline'
+Plugin 'tpope/vim-fugitive'
+Plugin 'scrooloose/Syntastic'
+Plugin 'scrooloose/nerdtree'
 call vundle#end()
 filetype plugin indent on
 syntax on
 "" Vundle END
 
-set guioptions-=mT
+" GUI options
+set t_Co=256
+set guioptions-=m  "remove menu bar
+set guioptions-=T  "remove toolbar
+set guioptions-=r  "remove right-hand scroll bar
+set guioptions-=L  "remove left-hand scroll bar
 
+let g:airline_powerline_fonts = 1
+"
 "" Colors
 set background=dark
-colorscheme monokai
+colorscheme molokai
 
 "" UI
 set number
@@ -39,20 +58,20 @@ set lazyredraw
 set ruler
 set backspace=indent,eol,start
 set autoindent
+set cindent
 set showmode
 set hidden
 set laststatus=2
 set relativenumber
 set undofile
 set mouse=a
+""set autoread
+"
 "" Tabs
 set tabstop=4
 set shiftwidth=4
 set softtabstop=4
 set expandtab
-
-
-set encoding=utf-8
 set scrolloff=3
 
 
@@ -62,8 +81,6 @@ set incsearch
 set showmatch
 set ignorecase
 set smartcase
-
-
 
 " turn off search highlight
 nnoremap <leader><space> :nohlsearch<CR>
@@ -85,3 +102,12 @@ set listchars=tab:▸\ ,eol:¬
 let mapleader=","
 inoremap jj <esc>
 
+
+""Go
+
+"" let g:go_fmt_command = "goimports"
+
+
+
+""Reactjs
+let g:syntastic_javascript_checkers = ['jsxhint']
