@@ -101,6 +101,10 @@ set listchars=tab:▸\ ,eol:¬
 "" Remapping
 let mapleader=","
 inoremap jj <esc>
+map å :
+
+"" Disable warning when existing swap file is found
+set shortmess+=A
 
 
 ""Go
